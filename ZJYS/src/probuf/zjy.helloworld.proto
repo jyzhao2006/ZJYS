@@ -1,0 +1,18 @@
+package zjy; 
+message request 
+{ 
+    required int32     type = 1;  // ID 
+    required string    args = 2;  // str 
+    optional int32     opt = 3;  //optional field 
+}
+
+message response
+{
+    required int32     status = 1;  // ID 
+    required string    result = 2;  // str 
+    optional int32     opt = 3;  //optional field    
+}
+
+service SearchService {
+  rpc Search (request) returns (response);
+}
